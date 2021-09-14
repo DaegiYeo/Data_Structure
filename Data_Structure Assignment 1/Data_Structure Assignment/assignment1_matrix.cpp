@@ -1,5 +1,5 @@
 
-//201727531 ¿©´ë±â ÀÚ·á±¸Á¶ °úÁ¦1
+//201727531 ì—¬ëŒ€ê¸° ìë£Œêµ¬ì¡° ê³¼ì œ1
 // Do not use 2-D array, such as int a[2][3];  
 #include <iostream> 
 
@@ -55,9 +55,9 @@ Matrix Matrix::Transpose() {
     {
         for (int j = 0; j < rows; j++)
         {
-            b.Term[i * rows + j] = Term[j * cols + i]; // Index ¹øÈ£¸¦ rows ¿Í cols ·Î Ç¥ÇöÇÏ¸é rows * i + j
-                                                       // ex) 3*3Çà·ÄÀÇ (1,2) => [5]
-                                                       // ÀüÄ¡ÇßÀ»¶§´Â j * cols +i 
+            b.Term[i * rows + j] = Term[j * cols + i]; // Index ë²ˆí˜¸ë¥¼ rows ì™€ cols ë¡œ í‘œí˜„í•˜ë©´ rows * i + j
+                                                       // ex) 3*3í–‰ë ¬ì˜ (1,2) => [5]
+                                                       // ì „ì¹˜í–ˆì„ë•ŒëŠ” j * cols +i 
         }
         //To be implemented 
     }
@@ -73,13 +73,13 @@ Matrix Matrix::Multiply(Matrix b) {
     {
         for (int j = 0; j < b.cols; j++)
         {
-            int sum = 0; // ÃÊ±â°ªÀ» 0À¸·Î ÁöÁ¤
+            int sum = 0; // ì´ˆê¸°ê°’ì„ 0ìœ¼ë¡œ ì§€ì •
             for (int k = 0; k < cols; k++)
             {
 
                 sum += Term[i * cols + k] * b.Term[k * b.cols + j];
 
-                //Çà·ÄÀÇ °ö¼À
+                //í–‰ë ¬ì˜ ê³±ì…ˆ
             }
             d.Term[i * b.cols + j] = sum;
 
@@ -127,7 +127,7 @@ Matrix Matrix::Multiply2(Matrix b) {
     d = bXpose.Multiply(Transpose());
     d = d.Transpose();
 
-    //  ÀüÄ¡Çà·ÄÀÇ ¼ºÁú ÀÌ¿ë AB = (BÀÇ ÀüÄ¡ * AÀÇ ÀüÄ¡)ÀüÄ¡
+    //  ì „ì¹˜í–‰ë ¬ì˜ ì„±ì§ˆ ì´ìš© AB = (Bì˜ ì „ì¹˜ * Aì˜ ì „ì¹˜)ì „ì¹˜
     //  Must be implemented by using bXpose  
     return d;
 }
@@ -188,7 +188,7 @@ again. */
     cout << d;
     cout << "using transpose()" << endl;
     //t = b.Transpose();
-    c = a.Multiply2(b);//a.Multyply2(b)·Î ¼öÁ¤   
+    c = a.Multiply2(b);//a.Multyply2(b)ë¡œ ìˆ˜ì •   
     cout << c;
 
     system("pause");
