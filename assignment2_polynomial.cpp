@@ -1,4 +1,5 @@
 //201727531 여대기 자료구조 두번째 과제입니다.
+//Github : https://github.com/DaegiYeo/Data_Structure/blob/main/assignment2_polynomial.cpp
 
 #include <vector>
 #include <algorithm>
